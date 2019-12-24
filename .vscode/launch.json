@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - WhileSort",
+            "request": "launch",
+            "mainClass": "WhileSort"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ArrayScanner",
             "request": "launch",
             "mainClass": "ArrayScanner"

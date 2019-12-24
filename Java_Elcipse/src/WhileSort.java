@@ -5,7 +5,7 @@ public class WhileSort {
     private static Scanner scanner = new Scanner(System.in);
     private static boolean flag = true;
     private static int temp;
-    static int number = 3; // size of array
+    static int number = 3;
 
 
 
@@ -17,6 +17,7 @@ public class WhileSort {
         int[]sortedArray = compare(value);
         System.out.println("Sorted Array: ");
         printArray(sortedArray);
+
     }
 
     static int[] getInputValues(int number){
