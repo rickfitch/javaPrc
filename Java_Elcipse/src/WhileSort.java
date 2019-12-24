@@ -24,7 +24,12 @@ public class WhileSort {
         System.out.println(" Input " + number + " numbers: \r");
         int[]input = new int[number];
         for(int i = 0; i < input.length; i++){
-            input[i] = scanner.nextInt();
+            try {
+                input[i] = scanner.nextInt();
+            } catch (Exception e) {
+               // e.printStackTrace();
+                System.out.println("\n  Only integers! ... 0 replaced 'char'...\n");
+            }
         }
         return input;
     }
