@@ -19,7 +19,7 @@ public class WhileSort {
         printArray(sortedArray);
 
     }
-
+//needs try catch
     static int[] getInputValues(int number){
         System.out.println(" Input " + number + " numbers: \r");
         int[]input = new int[number];
