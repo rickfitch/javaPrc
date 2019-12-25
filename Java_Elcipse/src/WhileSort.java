@@ -1,11 +1,12 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class WhileSort {
 
     private static Scanner scanner = new Scanner(System.in);
-    private static boolean flag = true;
-    private static int temp;
-    static int number = 3;
+
+
+    private static int number = 3;
 
 
 
@@ -14,13 +15,15 @@ public class WhileSort {
         int[]value = (getInputValues(number));
         System.out.println("You input the following:");
         printArray(value);
+        System.out.println("the minimum value input is: " + findMin(value));
         int[]sortedArray = compare(value);
         System.out.println("Sorted Array: ");
         printArray(sortedArray);
 
+
     }
-//needs try catch
-    static int[] getInputValues(int number){
+    //needs try catch
+    private static int[] getInputValues(int number){
         System.out.println(" Input " + number + " numbers: \r");
         int[]input = new int[number];
         for(int i = 0; i < input.length; i++){
@@ -34,12 +37,14 @@ public class WhileSort {
         return input;
     }
 
-    static void printArray(int array[]){
-        for(int i = 0; i < array.length; i++){
-            System.out.println(array[i]);
-        }
+   private static void printArray(int[] array){
+        System.out.println(Arrays.toString(array));
     }
-    static int[] compare(int array[]){
+
+
+    private static int[] compare(int[] array){
+        boolean flag = true;
+        int temp;
         while(flag){
             flag = false;
             for( int i = 0; i < array.length - 1; i++){
@@ -53,6 +58,16 @@ public class WhileSort {
             }
         }
         return array;
+    }
+    // finds minimum value of array
+    private static int findMin(int[] array){
+        int min = array[0];
+        for (int value : array) {
+            if (value < min) {
+                min = value;
+            }
+        }
+        return min;
     }
 
 
